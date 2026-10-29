@@ -66,7 +66,7 @@ export interface DidCommMediaSharingStorageProps {
   sentTime?: Date
 }
 
-// biome-ignore lint/suspicious/noExplicitAny: no explanation
+// biome-ignore lint/suspicious/noExplicitAny: the record does not define typed tags
 export class DidCommMediaSharingRecord extends BaseRecord<any, any, any> {
   public connectionId!: string
   public threadId?: string

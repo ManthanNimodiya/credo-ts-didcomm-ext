@@ -108,7 +108,7 @@ describe('SodVerifierService Testing', () => {
     expect(result.integrity).toBe(true)
 
     if (!result.authenticity || !result.integrity) {
-      // biome-ignore lint/suspicious/noConsole: no explanation
+      // biome-ignore lint/suspicious/noConsole: shows the verification details when the check fails
       console.log('Verification details:', result.details ?? '(no extra details)')
     }
   })

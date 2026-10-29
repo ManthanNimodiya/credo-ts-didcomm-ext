@@ -129,7 +129,7 @@ export class DidCommMrtdApi {
     const featureRegistry = this.agentContext.dependencyManager.resolve(DidCommFeatureRegistry)
 
     // TODO: This is a hack to allow features to be overwritten. This should be fixed in Credo
-    // biome-ignore lint/suspicious/noExplicitAny: no explanation
+    // biome-ignore lint/suspicious/noExplicitAny: DidCommFeatureRegistry does not expose its features to overwrite one
     const features = (featureRegistry as any).features as DidCommFeature[]
 
     const existingItemIndex = features.findIndex((item) => item.id === MrtdCapabilities.EMrtdReadSupport)

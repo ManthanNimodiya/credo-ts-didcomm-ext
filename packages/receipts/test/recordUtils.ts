@@ -11,7 +11,7 @@ import type {
 import { RepositoryEventTypes } from '@credo-ts/core'
 import { filter, map, pipe } from 'rxjs'
 
-// biome-ignore lint/suspicious/noExplicitAny: no explanation
+// biome-ignore lint/suspicious/noExplicitAny: matches records with any tag types
 type BaseRecordAny = BaseRecord<any, any, any>
 type RecordClass<R extends BaseRecordAny> = Constructor<R> & { type: string }
 export interface RecordsState<R extends BaseRecordAny> {
